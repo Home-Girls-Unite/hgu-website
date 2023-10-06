@@ -1,0 +1,18 @@
+@import '../shared/settings.scss';
+
+.about {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+
+  .description {
+    @include fontScale(2);
+    color: $primaryColor;
+    margin-top: 30px;
+  }
+
+  .logo {
+    height: 50px;
+    width: 50px;
+  }
+}

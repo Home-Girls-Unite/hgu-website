@@ -1,0 +1,22 @@
+@import '../shared/settings.scss';
+
+.copyright {
+  @include fontScale(2);
+  color: $primaryColor;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .socials {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+
+    svg {
+      fill: $primaryColor;
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+}

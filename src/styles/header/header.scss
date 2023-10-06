@@ -1,6 +1,6 @@
 @import '../shared//settings.scss';
 
-header {
+.header {
   background-color: $white;
   display: flex;
   align-items: center;
@@ -10,7 +10,7 @@ header {
   position: sticky;
   top: 0;
 
-  img {
+  .logo {
     height: 50px;
     width: 50px;
   }

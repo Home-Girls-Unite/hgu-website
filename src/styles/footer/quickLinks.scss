@@ -1,0 +1,26 @@
+@import '../shared/settings.scss';
+
+.quick-links {
+  align-items: center;
+  width: 400px;
+
+  .heading {
+    @include fontScale(4);
+    color: $primaryColor;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    .link-item {
+
+      &:not(:last-of-type) { padding-bottom: 7px; }
+
+      a {
+        color: $primaryColor;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import '../shared/settings.scss';
+
+.contact-info {
+  width: 400px;
+
+  .heading {
+    @include fontScale(4);
+    color: $primaryColor;
+  }
+
+  .address {
+    @include fontScale(2);
+    color: $primaryColor;
+  }
+}
