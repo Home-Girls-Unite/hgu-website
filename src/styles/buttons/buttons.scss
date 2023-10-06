@@ -1,0 +1,17 @@
+@import '../shared/settings.scss';
+
+.button {
+  padding: 18px;
+  border: 1px solid $primaryColor;
+  border-radius: 28px;
+  color: $white;
+
+  &:hover { color: $primaryColor; }
+
+  &.link-button {
+    @include fontScale(2);
+    background-color: $primaryColor;
+
+    &:hover { background-color: $buttonHover; }
+  }
+}

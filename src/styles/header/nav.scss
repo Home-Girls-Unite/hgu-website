@@ -1,0 +1,25 @@
+@import '../shared/settings.scss';
+
+nav {
+  width: 700px;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+
+    .link-item {
+
+      .link {
+        color: $primaryColor;
+        line-height: 7px;
+        text-underline-offset: 5px;
+    
+        &:hover { text-decoration: underline; }
+    
+        &:not(.active) { text-decoration: none; }
+      }
+    }
+  }
+}
