@@ -1,40 +1,9 @@
 import * as React from 'react'
 import {Link} from 'gatsby'
 
-import '../styles/header/nav.scss'
+import {LINKS} from '../lib/constants'
 
-const LINKS = [
-  {
-    id: '1',
-    path: '/',
-    label: 'Home'
-  },
-  {
-    id: '2',
-    path: 'events',
-    label: 'Events'
-  },
-  {
-    id: '3',
-    path: 'services',
-    label: 'Services'
-  },
-  {
-    id: '4',
-    path: 'healing-corner',
-    label: 'Healing Corner'
-  },
-  {
-    id: '5',
-    path: 'press',
-    label: 'Funders/Press'
-  },
-  {
-    id: '6',
-    path: 'work-with-us',
-    label: 'Work With Us'
-  }
-]
+import '../styles/header/nav.scss'
 
 const Nav = ({links = LINKS}) => (
   <nav>
