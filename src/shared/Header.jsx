@@ -8,8 +8,8 @@ import Logo from '../images/icon.png'
 import '../styles/header/header.scss'
 
 const Header = () => (
-  <header>
-    <img alt='home-girls-unite-logo' src={Logo} />
+  <header className='header'>
+    <img className='logo' alt='home-girls-unite-logo' src={Logo} />
     <Nav />
     <LinkButton path='contact' label='Contact Us' />
   </header>
