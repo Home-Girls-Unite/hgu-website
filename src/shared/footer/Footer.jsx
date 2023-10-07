@@ -1,9 +1,10 @@
 import * as React from 'react'
 
 import About from './About'
-import QuickLinks from './QuickLinks'
 import ContactInfo from './ContactInfo'
 import Copyright from './Copyright'
+import NewsLetter from './NewsLetter'
+import QuickLinks from './QuickLinks'
 
 import '../../styles/footer/footer.scss'
 
@@ -13,6 +14,7 @@ const Footer = () => (
       <About />
       <QuickLinks />
       <ContactInfo />
+      <NewsLetter />
     </div>
     <Copyright />
   </footer>
