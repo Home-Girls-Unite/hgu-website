@@ -4,11 +4,6 @@
   align-items: center;
   width: 400px;
 
-  .heading {
-    @include fontScale(4);
-    color: $primaryColor;
-  }
-
   ul {
     list-style: none;
     padding: 0;

@@ -12,6 +12,19 @@
     @include fontScale(2);
     background-color: $primaryColor;
 
-    &:hover { background-color: $buttonHover; }
+    &:hover {
+      background-color: $buttonHover;
+    }
+  }
+
+  &.basic-button {
+    @include fontScale(2);
+    color: $primaryColor;
+    background-color: $white;
+
+    &:hover {
+      background-color: $primaryColor;
+      color: $white;
+    }
   }
 }

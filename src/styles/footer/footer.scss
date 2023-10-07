@@ -9,4 +9,9 @@
     justify-content: space-between;
     width: 100%;
   }
+
+  .heading {
+    @include fontScale(4);
+    color: $primaryColor;
+  }
 }
