@@ -1,4 +1,5 @@
 import * as React from 'react'
+import {Link} from 'gatsby'
 
 import Nav from './Nav'
 import {LinkButton} from './Buttons'
@@ -9,7 +10,7 @@ import '../styles/header/header.scss'
 
 const Header = () => (
   <header className='header'>
-    <img className='logo' alt='home-girls-unite-logo' src={Logo} />
+    <Link to='/'><img className='logo' alt='home-girls-unite-logo' src={Logo} /></Link>
     <Nav />
     <LinkButton path='contact' label='Contact Us' />
   </header>
