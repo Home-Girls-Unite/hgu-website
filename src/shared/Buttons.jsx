@@ -16,3 +16,7 @@ export const LinkButton = props => {
     <button className='button link-button' onClick={onClick}>{props.label}</button>
   )
 }
+
+export const Button = ({disabled, processing, onClick, label}) => (
+  <button className='button basic-button' disabled={disabled || processing} onClick={onClick}>{label}</button>
+)
