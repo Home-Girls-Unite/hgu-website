@@ -12,7 +12,24 @@ module.exports = {
       "projectId": "efn30l8o",
       "dataset": ""
     }
-  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sass", "gatsby-plugin-google-gtag", "gatsby-plugin-sitemap", {
+  }, {
+    resolve: 'gatsby-plugin-google-gtag',
+    options: {
+      trackingIds: ['GA-TRACKING_ID']
+    }
+  }, {
+    resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: 'Inter',
+            file: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap',
+          },
+        ],
+      }
+  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sass", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/icon.png"
