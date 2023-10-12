@@ -4,20 +4,8 @@ import Footer from "../shared/footer/Footer"
 import Showcases from "../shared/homepage/showcases/Showcases"
 import Trustees from "../shared/homepage/trustees/Trustees"
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  paddingTop: 0,
-  fontFamily: "-apple-system, 'Inter', sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
+import "../styles/homepage.scss"
+
 const paragraphStyles = {
   marginBottom: 48,
 }
@@ -130,13 +118,10 @@ const links = [
 
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
+    <main className="homepage">
       <Header />
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a beautiful Gatsby site! 🎉🎉🎉</span>
-      </h1>
+      <h1 className="heading">HomeGirlsUnite</h1>
+      <h4 className="sub-heading">Creating Safe Spaces For Eldest Daughters</h4>
       <Showcases />
       <Trustees />
       <p style={paragraphStyles}>
