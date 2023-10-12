@@ -1,0 +1,19 @@
+@import './shared/settings.scss';
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.homepage {
+  padding: 0 80px 50px;
+
+  .heading {
+    @include fontScale(7);
+    margin-bottom: 0;
+  }
+
+  .heading, .sub-heading {
+    color: $primaryColor;
+    text-align: center;
+  }
+}
