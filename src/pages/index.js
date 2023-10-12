@@ -1,12 +1,14 @@
 import * as React from "react"
 import Header from "../shared/Header"
 import Footer from "../shared/footer/Footer"
+import Showcases from "../shared/homepage/showcases/Showcases"
+import Trustees from "../shared/homepage/trustees/Trustees"
 
 const pageStyles = {
   color: "#232129",
   padding: 96,
   paddingTop: 0,
-  fontFamily: "-apple-system, Inter, sans-serif, serif",
+  fontFamily: "-apple-system, 'Inter', sans-serif, serif",
 }
 const headingStyles = {
   marginTop: 0,
@@ -135,6 +137,8 @@ const IndexPage = () => {
         <br />
         <span style={headingAccentStyles}>— you just made a beautiful Gatsby site! 🎉🎉🎉</span>
       </h1>
+      <Showcases />
+      <Trustees />
       <p style={paragraphStyles}>
         Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
         update in real-time. 😎
