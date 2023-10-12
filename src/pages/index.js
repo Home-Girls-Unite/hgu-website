@@ -120,8 +120,8 @@ const IndexPage = () => {
   return (
     <main className="homepage">
       <Header />
-      <h1 className="heading">HomeGirlsUnite</h1>
-      <h4 className="sub-heading">Creating Safe Spaces For Eldest Daughters</h4>
+      <h1 className="base-heading">HomeGirlsUnite</h1>
+      <h4 className="base-sub-heading">Creating Safe Spaces For Eldest Daughters</h4>
       <Showcases />
       <Trustees />
       <p style={paragraphStyles}>

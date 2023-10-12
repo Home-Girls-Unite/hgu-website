@@ -7,12 +7,12 @@
 .homepage {
   padding: 0 80px 50px;
 
-  .heading {
+  .base-heading {
     @include fontScale(7);
     margin-bottom: 0;
   }
 
-  .heading, .sub-heading {
+  .base-heading, .base-sub-heading {
     color: $primaryColor;
     text-align: center;
   }
