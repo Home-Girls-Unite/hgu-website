@@ -17,6 +17,7 @@
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
     "gatsby": "^5.12.4",
+    "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-google-gtag": "^5.12.0",
     "gatsby-plugin-image": "^3.12.0",
     "gatsby-plugin-manifest": "^5.12.0",
@@ -29,6 +30,7 @@
     "gatsby-transformer-sharp": "^5.12.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-hook-form": "^7.47.0",
     "react-responsive-carousel": "^3.2.23",
     "sass": "^1.69.0"
