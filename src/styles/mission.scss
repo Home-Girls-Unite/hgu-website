@@ -1,0 +1,37 @@
+@import './shared/settings.scss';
+
+.mission {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 164px;
+  margin-bottom: 50px;
+
+  svg {
+    fill: $primaryColor;
+    height: 40px;
+    width: 40px;
+  }
+
+  .question, .answer { color: $primaryColor; }
+
+  .question { width: 460px; }
+
+  .section {
+
+    .answers {
+      width: 630px;
+      padding-left: 96px;
+  
+      .answer {
+        @include fontWeightScale(3);
+        @include fontScale(6);
+        cursor: grab;
+        text-align: left;
+        height: 200px;
+  
+        &::first-letter { text-transform: uppercase; }
+      }
+    }
+  }
+
+}
