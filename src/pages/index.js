@@ -3,6 +3,7 @@ import * as React from "react"
 import Header from "../shared/Header"
 import Footer from "../shared/footer/Footer"
 import LetsTalk from "../shared/LetsTalk"
+import Mission from "../shared/Mission"
 import Showcases from "../shared/homepage/showcases/Showcases"
 import Trustees from "../shared/homepage/trustees/Trustees"
 
@@ -16,6 +17,7 @@ const IndexPage = () => {
       <h4 className="base-sub-heading">Creating Safe Spaces For Eldest Daughters</h4>
       <Showcases />
       <Trustees />
+      <Mission />
       <LetsTalk />
       <Footer />
     </main>
