@@ -9,9 +9,12 @@ import '../styles/mission.scss'
 
 const Mission = () => (
   <section className='mission'>
-    <h1 className='question'>
-      Why Do We Support The Eldest Daughter?
-    </h1>
+    <div className='question'>
+      <h1>
+        Why Do We Support The Eldest Daughter?
+      </h1>
+
+    </div>
     <div className='section'>
       <Slashes />
       <Carousel className='answers' emulateTouch infiniteLoop showArrows={false} showStatus={false} showIndicators={false}>

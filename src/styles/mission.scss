@@ -2,8 +2,7 @@
 
 .mission {
   display: flex;
-  justify-content: space-between;
-  padding: 0 164px;
+  padding: 0 315px;
   margin-bottom: 50px;
 
   svg {
@@ -14,7 +13,14 @@
 
   .question, .answer { color: $primaryColor; }
 
-  .question { width: 460px; }
+  .question {
+    width: 700px;
+
+    h1 {
+      padding-left: 150px;
+      width: 460px;
+    }
+  }
 
   .section {
 
