@@ -1,0 +1,37 @@
+@import './shared/settings.scss';
+
+.lets-talk {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+
+  .additional-text, .text, .heading {
+    color: $primaryColor;
+    text-align: center;
+  }
+
+  .text {
+    @include fontWeightScale(3);
+    @include fontScale(2);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+
+  .heading {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .additional-text { margin-bottom: 40px; }
+
+  .link-button.lets-talk-button {
+    color: $primaryColor;
+    background-color: $white;
+
+    &:hover {
+      background-color: $primaryColor;
+      color: $white;
+    }
+  }
+}
