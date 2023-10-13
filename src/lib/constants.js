@@ -1,3 +1,5 @@
+import {firstLetterUppercaseSentence} from './textTools'
+
 export const LINKS = [
   {
     id: '1',
@@ -41,3 +43,24 @@ export const QUICK_LINKS = [
 ]
 
 export const ORGANIZATION_NAME = 'Home Girls Unite'
+
+export const ANSWERS = [
+  {
+    id: '1',
+    value: `${firstLetterUppercaseSentence('Home Girls is building a community of women who will understand, empower and support one another')}.`
+  },
+  {
+    id: '2',
+    value: firstLetterUppercaseSentence(
+      'We support a niche but a large group of women who have been ignored for a long time. Many daughters we work with have suffered emotional, physical and financial abuse'
+    )
+  },
+  {
+    id: '3',
+    value: `${firstLetterUppercaseSentence("Some women's paychecks go straight to their parents, and others are forced to look after younger siblings at the expense of their schooling or work")}.`
+  },
+  {
+    id: '4',
+    value: `${firstLetterUppercaseSentence('Consequently, they lose out on building a community, friendships and other relationships outside of the family')}.`
+  }
+]
