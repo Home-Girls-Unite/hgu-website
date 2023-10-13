@@ -1,4 +1,5 @@
 import * as React from 'react'
+import classnames from 'classnames'
 
 import {useCallback} from 'react'
 import {navigate} from 'gatsby'
@@ -13,10 +14,10 @@ export const LinkButton = props => {
   }, [props.path])
 
   return (
-    <button className='button link-button' onClick={onClick}>{props.label}</button>
+    <button className={classnames('button link-button', props.className)} onClick={onClick}>{props.label}</button>
   )
 }
 
-export const Button = ({disabled, processing, onClick, label}) => (
-  <button className='button basic-button' disabled={disabled || processing} onClick={onClick}>{label}</button>
+export const Button = ({disabled, processing, onClick, label, className}) => (
+  <button className={classnames('button basic-button', className)} disabled={disabled || processing} onClick={onClick}>{label}</button>
 )
