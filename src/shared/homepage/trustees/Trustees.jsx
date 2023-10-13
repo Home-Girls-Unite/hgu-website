@@ -24,7 +24,6 @@ const Trustees = () => {
       }
     }
   `)
-  console.log(data)
 
   return (
     <section className='trustees'>
