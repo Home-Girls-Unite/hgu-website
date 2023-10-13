@@ -39,3 +39,5 @@ export const QUICK_LINKS = [
     label: 'Contact Us'
   }
 ]
+
+export const ORGANIZATION_NAME = 'Home Girls Unite'
