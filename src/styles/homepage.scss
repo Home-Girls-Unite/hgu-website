@@ -51,13 +51,18 @@ table {
 .homepage {
   padding: 0 80px 50px;
 
-  .base-heading {
+  h1 {
     @include fontScale(7);
-    margin-bottom: 0;
+    @include fontWeightScale(3);
   }
 
   .base-heading, .base-sub-heading {
     color: $primaryColor;
     text-align: center;
+    margin-bottom: 20px;
   }
+
+  .base-heading { margin-top: 50px; }
+
+  .base-sub-heading { margin-bottom: 50px; }
 }

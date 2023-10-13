@@ -9,6 +9,13 @@
     text-align: center;
   }
 
+  .text {
+    @include fontWeightScale(3);
+    @include fontScale(2);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
   .image-container {
     margin-top: 80px;
 
