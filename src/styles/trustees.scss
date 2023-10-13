@@ -1,8 +1,8 @@
 @import './shared/settings.scss';
 
 .trustees {
-  margin-top: 200px;
-  margin-bottom: 200px;
+  margin: 200px 0;
+  padding: 0 80px;
 
   .text, .heading {
     color: $primaryColor;
