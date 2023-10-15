@@ -1,0 +1,44 @@
+@import './shared/settings.scss';
+
+.about-us {
+  color: $primaryColor;
+  display: flex;
+  justify-content: center;
+  padding: 80px 164px 0;
+
+  .profile, .image { width: 717px; }
+
+  .image { margin-right: 100px; }
+
+  .profile {
+    align-self: center;
+
+    .sub-heading {
+      @include fontWeightScale(3);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .heading { margin-bottom: 30px; }
+
+    .story { @include fontScale(3); }
+
+    .button-group {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-top: 30px;
+
+      .link-button.contact-button {
+        color: $primaryColor;
+        background-color: $buttonHover;
+    
+        &:hover {
+          background-color: $primaryColor;
+          color: $white;
+        }
+      }
+    }
+  }
+}

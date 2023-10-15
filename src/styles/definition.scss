@@ -1,0 +1,49 @@
+@import './shared/settings.scss';
+
+.definition {
+  color: $primaryColor;
+  display: flex;
+  justify-content: center;
+  padding: 80px 164px 0;
+
+  .image { width: 461px; }
+
+  .details {
+    align-self: center;
+    margin-right: 100px;
+    width: 717px;
+
+    .sub-heading {
+      @include fontWeightScale(3);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .heading, .eldest-daughter { margin-bottom: 30px; }
+
+    .eldest-daughter, .examples { @include fontScale(3); }
+    
+    .examples {
+      list-style: decimal;
+      margin-left: 50px;
+    }
+
+    .button-group {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-top: 30px;
+
+      .link-button.events-button {
+        color: $primaryColor;
+        background-color: $buttonHover;
+    
+        &:hover {
+          background-color: $primaryColor;
+          color: $white;
+        }
+      }
+    }
+  }
+}
