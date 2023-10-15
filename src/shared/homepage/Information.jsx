@@ -25,7 +25,6 @@ const Information = () => {
       }
     }
   `)
-  console.log(data)
 
   return (
     <section className='information'>
