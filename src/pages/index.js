@@ -2,6 +2,7 @@ import * as React from "react"
 
 import Header from "../shared/Header"
 import Footer from "../shared/footer/Footer"
+import Information from "../shared/homepage/Information"
 import LetsTalk from "../shared/LetsTalk"
 import Mission from "../shared/Mission"
 import Showcases from "../shared/homepage/showcases/Showcases"
@@ -18,6 +19,7 @@ const IndexPage = () => {
       <h1 className="base-heading">{ORGANIZATION_NAME.replace(/\s/g, '')}</h1>
       <h4 className="base-sub-heading">Creating Safe Spaces For Eldest Daughters</h4>
       <Showcases />
+      <Information />
       <Trustees />
       <Mission />
       <LetsTalk />
