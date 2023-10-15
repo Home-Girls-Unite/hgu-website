@@ -27,7 +27,7 @@ const Definition = ({imageName = '', images}) => {
             <li>The firstborn daughter rejected the role</li>
             <li>All daughters have been parentified</li>
           </ol>
-          <div className='button-group'>
+          <div className='button-group fade-in-group'>
             <LinkButton className='events-button' path='events' label='Events' />
           </div>
         </div>

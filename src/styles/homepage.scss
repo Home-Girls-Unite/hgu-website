@@ -67,4 +67,14 @@ table {
   .base-sub-heading { margin-bottom: 50px; }
 
 	.showcases { padding: 0 80px; }
+
+	.fade-in-group { animation: fadeIn 7s; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% {
+		margin-top: 40px;
+		opacity: 1;
+	}
 }
