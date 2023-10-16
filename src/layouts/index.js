@@ -6,6 +6,8 @@ import Footer from '../shared/footer/Footer'
 
 import {ORGANIZATION_NAME} from '../lib/constants'
 
+import './layout.scss'
+
 const TemplateWrapper = ({children}) => (
   <main className="homepage">
     <Helmet
