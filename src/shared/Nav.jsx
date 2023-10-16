@@ -6,7 +6,7 @@ import {LINKS} from '../lib/constants'
 import '../styles/header/nav.scss'
 
 const Nav = ({links = LINKS}) => (
-  <nav>
+  <nav className='nav'>
     <ul>
       {
         links.map(link => (
