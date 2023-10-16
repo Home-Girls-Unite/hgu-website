@@ -8,27 +8,27 @@ export const LINKS = [
   },
   {
     id: '2',
-    path: 'events',
+    path: '/events',
     label: 'Events'
   },
   {
     id: '3',
-    path: 'services',
+    path: '/services',
     label: 'Services'
   },
   {
     id: '4',
-    path: 'healing-corner',
+    path: '/healing-corner',
     label: 'Healing Corner'
   },
   {
     id: '5',
-    path: 'press',
+    path: '/press',
     label: 'Funders/Press'
   },
   {
     id: '6',
-    path: 'work-with-us',
+    path: '/work-with-us',
     label: 'Work With Us'
   }
 ]
@@ -37,7 +37,7 @@ export const QUICK_LINKS = [
   ...LINKS,
   {
     id: '7',
-    path: 'contact',
+    path: '/contact',
     label: 'Contact Us'
   }
 ]
