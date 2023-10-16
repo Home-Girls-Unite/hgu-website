@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   height: 90px;
-  padding: 0 80px;
+  padding: 0 20px;
   position: sticky;
   top: 0;
   z-index: 5;
@@ -14,6 +14,16 @@
   .logo {
     height: 50px;
     width: 50px;
+  }
+
+  .nav { display: none; }
+
+  @media (min-width: $tabletSm) {
+    padding: 0 80px;
+
+    .nav { display: inline-block; }
+
+    .mobile-nav { display: none; }
   }
 
   @media (min-width: $desktopLg) {

@@ -1,6 +1,7 @@
 @import './shared/settings.scss';
 
 .lets-talk {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;

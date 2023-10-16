@@ -4,12 +4,15 @@
   @include fontScale(2);
   color: $primaryColor;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
   width: 100%;
 
   .socials {
     display: flex;
+    align-self: center;
     justify-content: space-between;
+    margin-top: 20px;
     width: 80px;
 
     svg {
@@ -19,4 +22,13 @@
     }
   }
 
+  @media (min-width: $tabletSm) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .socials {
+      align-self: auto;
+      margin-top: 0;
+    }
+  }
 }

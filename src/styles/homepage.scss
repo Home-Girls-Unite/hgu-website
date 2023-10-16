@@ -66,9 +66,14 @@ table {
 
   .base-sub-heading { margin-bottom: 50px; }
 
-	.showcases { padding: 0 80px; }
+	.showcases { padding: 0 20px; }
 
 	.fade-in-group { animation: fadeIn 7s; }
+
+	@media (min-width: $tabletSm) {
+
+		.showcases { padding: 0 80px; }
+	}
 
 	@media (min-width: $desktopLg) {
 

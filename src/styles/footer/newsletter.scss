@@ -1,7 +1,10 @@
 @import '../shared/settings.scss';
 
 .newsletter {
-  width: 250px;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
 
   .description {
     color: $primaryColor;
@@ -14,7 +17,7 @@
     input {
       height: 30px;
       width: 100%;
-      padding: 10px;
+      padding: 10px 0;
       border: 0;
       border-bottom: 1px solid $primaryColor;
       outline-style: none;
@@ -28,7 +31,14 @@
     }
   }
 
-  @media (min-width: $desktopXLg) {
-    width: 400px;
+  @media (min-width: $tabletSm) {
+    text-align: left;
+    width: 250px;
+
+    .form input { padding: 10px; }
   }
+
+  @media (min-width: $tabletLg) { margin-bottom: 0; }
+
+  @media (min-width: $desktopXLg) { width: 400px; }
 }
