@@ -3,10 +3,18 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `HomeGirlsUnite`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: 'HomeGirlsUnite',
+    siteUrl: 'https://www.yourdomain.tld'
   },
-  plugins: [{
+  plugins: [
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: require.resolve('./src/layouts/index.js'),
+      },
+    },
+    {
     resolve: 'gatsby-source-sanity',
     options: {
       "projectId": "efn30l8o",
@@ -18,10 +26,10 @@ module.exports = {
       trackingIds: ['GA-TRACKING_ID']
     }
   }, {
-    resolve: `gatsby-omni-font-loader`,
+    resolve: 'gatsby-omni-font-loader',
       options: {
         enableListener: true,
-        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        preconnect: ['https://fonts.googleapis.com', 'https://fonts.gstatic.com'],
         web: [
           {
             name: 'Inter',
