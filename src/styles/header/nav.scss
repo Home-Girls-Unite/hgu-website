@@ -1,11 +1,13 @@
 @import '../shared/settings.scss';
 
 nav {
-  width: 700px;
+  width: 60%;
 
   ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+    height: 55px;
     justify-content: space-between;
     padding: 0;
 
@@ -21,5 +23,10 @@ nav {
         &:not(.active) { text-decoration: none; }
       }
     }
+  }
+
+  @media (min-width: $desktopLg) {
+
+    ul { height: auto; }
   }
 }

@@ -1,6 +1,7 @@
 @import '../shared/settings.scss';
 
 .newsletter {
+  width: 250px;
 
   .description {
     color: $primaryColor;
@@ -25,5 +26,9 @@
 
       &::placeholder { color: $primaryColor; }
     }
+  }
+
+  @media (min-width: $desktopXLg) {
+    width: 400px;
   }
 }

@@ -2,11 +2,9 @@
 
 .quick-links {
   align-items: center;
-  width: 400px;
+  width: 250px;
 
   ul {
-    list-style: none;
-    padding: 0;
 
     .link-item {
 
@@ -17,5 +15,9 @@
         text-decoration: none;
       }
     }
+  }
+
+  @media (min-width: $desktopXLg) {
+    width: 400px;
   }
 }

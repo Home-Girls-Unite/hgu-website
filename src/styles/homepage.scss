@@ -52,7 +52,7 @@ table {
   padding: 0 0 50px;
 
   h1 {
-    @include fontScale(7);
+    @include fontScale(6);
     @include fontWeightScale(3);
   }
 
@@ -69,6 +69,11 @@ table {
 	.showcases { padding: 0 80px; }
 
 	.fade-in-group { animation: fadeIn 7s; }
+
+	@media (min-width: $desktopLg) {
+
+		h1 { @include fontScale(7); }
+	}
 }
 
 @keyframes fadeIn {

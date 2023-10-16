@@ -1,10 +1,14 @@
 @import '../shared/settings.scss';
 
 .contact-info {
-  width: 400px;
+  width: 250px;
 
   .address {
     @include fontScale(2);
     color: $primaryColor;
+  }
+
+  @media (min-width: $desktopXLg) {
+    width: 400px;
   }
 }

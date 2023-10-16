@@ -1,7 +1,7 @@
 @import './shared/settings.scss';
 
 .trustees {
-  margin: 200px 0;
+  margin: 50px 0;
   padding: 0 80px;
 
   .text, .heading {
@@ -21,7 +21,16 @@
 
     .trustee-image {
       min-height: 620px;
-      width: 470px;
+      width: 25%;
     }
+  }
+
+  @media (min-width: $desktopLg) {
+    margin: 200px 0;
+  }
+
+  @media (min-width: $desktopXLg) {
+
+    .image-container .trustee-image { width: 470px; }
   }
 }

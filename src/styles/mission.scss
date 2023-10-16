@@ -1,8 +1,6 @@
 @import './shared/settings.scss';
 
 .mission {
-  display: flex;
-  padding: 0 315px;
   margin-bottom: 50px;
 
   svg {
@@ -14,25 +12,27 @@
   .question, .answer { color: $primaryColor; }
 
   .question {
-    width: 700px;
 
     h1 {
-      padding-left: 150px;
-      width: 460px;
+      margin: 0 auto;
+      width: 56%;
     }
   }
 
   .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
 
     .answers {
-      width: 630px;
-      padding-left: 96px;
+      padding-top: 40px;
+      width: 56%;
   
       .answer {
         @include fontWeightScale(3);
-        @include fontScale(6);
+        @include fontScale(4);
         cursor: grab;
-        text-align: left;
         height: 200px;
   
         &::first-letter { text-transform: uppercase; }
@@ -40,4 +40,38 @@
     }
   }
 
+  @media (min-width: $desktopLg) {
+    display: flex;
+    padding: 0 200px;
+    justify-content: space-between;
+
+    .question {
+      width: 700px;
+
+      h1 {
+        margin: 0;
+        width: 460px;
+      }
+    }
+
+    .section {
+      display: block;
+      margin-top: 0;
+
+      .answers {
+        width: 630px;
+        padding-top: 0;
+        padding-left: 96px;
+
+        .answer {
+          @include fontScale(6);
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  @media (min-width: desktopXLg) {
+    padding: 0 315px;
+  }
 }
