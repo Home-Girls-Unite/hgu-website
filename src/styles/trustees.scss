@@ -21,13 +21,16 @@
 
     .trustee-image {
       min-height: 620px;
-      width: 25%;
+      width: 50%;
     }
   }
 
-  @media (min-width: $desktopLg) {
-    margin: 200px 0;
+  @media (min-width: $tabletLg) {
+
+    .image-container .trustee-image { width: 25%; }
   }
+
+  @media (min-width: $desktopLg) { margin: 200px 0; }
 
   @media (min-width: $desktopXLg) {
 
