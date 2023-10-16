@@ -1,0 +1,41 @@
+@import '../shared/settings.scss';
+
+.mobile-nav {
+
+  nav {
+
+    ul {
+      animation: growDown 300ms ease-in-out forwards;
+      background-color: $buttonHover;
+      position: absolute;
+      top: 90px;
+      transform-origin: top center;
+      right: 0;
+      width: 100%;
+
+      .mobile-link-item {
+        border-bottom: 1px solid $primaryColor;
+        padding: 10px;
+
+        a {
+          color: $primaryColor;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .mobile-button {
+      border: none;
+      background-color: $white;
+      color: $primaryColor;
+      padding: 10px;
+  
+      &:hover {
+        color: $primaryColor;
+        background-color: $white;
+      }
+
+      .fa-bars, .fa-xmark { @include fontScale(6); }
+    }
+  }
+}
