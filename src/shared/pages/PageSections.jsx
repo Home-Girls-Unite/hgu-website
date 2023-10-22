@@ -14,7 +14,7 @@ const PageSections = ({sections, className}) => (
         <div className='section' key={section.id}>
           <h2>{section.title}</h2>
           <div className='information'>
-            <PortableText value={section.description} />
+            <PortableText value={section._rawDescription} />
             {
               section.buttons.length > 0 && (
                 <div className='button-group'>

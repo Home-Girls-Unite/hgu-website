@@ -27,20 +27,35 @@ const TemplateWrapper = ({children, uri}) => {
             slug {
               current
             }
-            description {
-              children {
-                text
-                _type
-              }
-              _type
-              style
-            }
+            _rawDescription
             buttons {
               id
               label
               link
             }
           }
+          cover {
+            ...on SanityPhoto {...Photo}
+            ...on SanityShowcase {...Showcase}
+          }
+        }
+      }
+    }
+    fragment Photo on SanityPhoto {
+      id
+      name
+      image {
+        asset {
+          gatsbyImageData
+        }
+      }
+    }
+    fragment Showcase on SanityShowcase {
+      id
+      name
+      image {
+        asset {
+          gatsbyImageData
         }
       }
     }
