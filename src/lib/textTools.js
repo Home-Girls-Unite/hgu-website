@@ -11,3 +11,10 @@ export const firstLetterUppercaseSentence = sentence => sentence.split(' ').redu
   },
   ''
 )
+
+export const normalizeUrl = path => {
+  if (path.startsWith('/'))
+    return path
+  else
+    return `/${path}`
+}
