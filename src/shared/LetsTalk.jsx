@@ -11,7 +11,7 @@ const LetsTalk = () => (
     <p className='text'>Let's Talk</p>
     <h1 className='heading'>{ORGANIZATION_NAME}</h1>
     <p className='additional-text'>Helping eldest daughters thrive</p>
-    <LinkButton className='lets-talk-button' label='Contact Us' />
+    <LinkButton className='lets-talk-button' path='/contact' label='Contact Us' />
   </section>
 )
 
