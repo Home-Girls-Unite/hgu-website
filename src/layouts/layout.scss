@@ -58,6 +58,8 @@ main {
 
 	a, p, h1, h2, h3, h5, h5, div, section, li { color: $primaryColor; }
 
+  svg { fill: $primaryColor; }
+
   .base-heading, .base-sub-heading {
     color: $primaryColor;
     text-align: center;
