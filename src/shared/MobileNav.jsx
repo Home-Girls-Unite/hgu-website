@@ -5,6 +5,7 @@ import {faBars, faClose} from '@fortawesome/free-solid-svg-icons'
 
 import {Button} from './Buttons'
 import {LINKS} from '../lib/constants'
+import {normalizeUrl} from '../lib/textTools'
 
 import '../styles/header/mobileNav.scss'
 
@@ -30,7 +31,7 @@ const MobileNav = ({links = LINKS}) => {
               {
                 links.map(link => (
                   <li className='mobile-link-item' key={link.id}>
-                    <Link activeClassName='active' className='mobile-link' to={link.path}>
+                    <Link activeClassName='active' className='mobile-link' onClick={onClick} to={normalizeUrl(link.path)}>
                       {link.label}
                     </Link>
                   </li>
