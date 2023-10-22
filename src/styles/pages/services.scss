@@ -1,0 +1,61 @@
+@import '../shared/settings.scss';
+
+.cover {
+  margin: 0 80px;
+
+  .heading {
+    margin: 80px auto;
+    width: 450px;
+
+    h5 {
+      @include fontWeightScale(3);
+      color: $primaryColor;
+      letter-spacing: 2px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .base-heading {
+      margin-top: 15px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.contents {
+  border-top: 2px solid $primaryColor;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 80px 80px;
+  padding-top: 100px;
+
+  .spotlight, .sections { width: 45%; }
+
+  .base-heading {
+    margin-top: 0;
+    text-align: left;
+  }
+
+  h2 {
+    @include fontScale(4);
+    @include fontWeightScale(3);
+    color: $primaryColor;
+    margin-bottom: 40px;
+  }
+
+  .sections {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .section {
+      width: 45%;
+
+      p {
+        @include fontScale(2);
+
+        &:not(:last-of-type) { margin-bottom: 20px; }
+      }
+    }
+  }
+}
