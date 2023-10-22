@@ -1,8 +1,25 @@
 @import '../shared/settings.scss';
 
-.sections {
+.page-sections {
   margin: 0 auto 200px;
   width: 70%;
+
+  &.work-with-us {
+
+    .section {
+
+      &:not(:nth-child(1)) {
+
+        p {
+    
+          &:not(:nth-child(1)) {
+            display: list-item;
+            margin-left: 40px;
+          }
+        }
+      }
+    }
+  }
 
   h2 {
     @include fontScale(5);
@@ -33,7 +50,7 @@
           border: none;
           border-radius: 0;
           padding: 10px;
-          width: 120px;
+          width: 130px;
           background-color: $primaryColor;
 
           a {
