@@ -38,6 +38,10 @@ const TemplateWrapper = ({children, uri}) => {
             ...on SanityPhoto {...Photo}
             ...on SanityShowcase {...Showcase}
           }
+          spotlight {
+            ...on SanityPhoto {...Photo}
+            ...on SanityShowcase {...Showcase}
+          }
         }
       }
     }
