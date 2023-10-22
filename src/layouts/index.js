@@ -76,7 +76,12 @@ const TemplateWrapper = ({children, uri}) => {
           ]}
         />
         <Header />
-        {React.cloneElement(children, {pages: data.allSanityPage.nodes})}
+        {
+          React.cloneElement(
+            children,
+            {
+              page: data.allSanityPage.nodes.find(node => node.slug.current === uri.replace('/', '')) || {}})
+            }
         <LetsTalk />
         <Footer />
       </main>
