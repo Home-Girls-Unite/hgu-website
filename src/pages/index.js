@@ -1,7 +1,6 @@
 import * as React from "react"
 
 import Information from "../shared/homepage/Information"
-import LetsTalk from "../shared/LetsTalk"
 import Mission from "../shared/Mission"
 import Showcases from "../shared/homepage/showcases/Showcases"
 import Trustees from "../shared/homepage/trustees/Trustees"
@@ -16,7 +15,6 @@ const IndexPage = () => (
     <Information />
     <Trustees />
     <Mission />
-    <LetsTalk />
   </React.Fragment>
 )
 

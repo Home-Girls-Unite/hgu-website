@@ -3,6 +3,7 @@ import {Helmet} from 'react-helmet'
 
 import Header from '../shared/Header'
 import Footer from '../shared/footer/Footer'
+import LetsTalk from '../shared/LetsTalk'
 
 import {ORGANIZATION_NAME} from '../lib/constants'
 
@@ -19,6 +20,7 @@ const TemplateWrapper = ({children}) => (
     />
     <Header />
     {children}
+    <LetsTalk />
     <Footer />
   </main>
 )
