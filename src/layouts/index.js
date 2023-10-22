@@ -51,6 +51,7 @@ const TemplateWrapper = ({children, uri}) => {
       image {
         asset {
           gatsbyImageData
+          url
         }
       }
     }
@@ -60,6 +61,7 @@ const TemplateWrapper = ({children, uri}) => {
       image {
         asset {
           gatsbyImageData
+          url
         }
       }
     }
