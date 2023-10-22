@@ -1,0 +1,55 @@
+@import '../shared/settings.scss';
+
+.sections {
+  margin: 0 auto 200px;
+  width: 70%;
+
+  h2 {
+    @include fontScale(5);
+    @include fontWeightScale(3);
+    align-self: center;
+    text-align: center;
+    text-transform: uppercase;
+    width: 21%;
+  }
+
+  h2, p { color: $primaryColor; }
+
+  .section {
+    display: flex;
+    justify-content: space-between;
+
+    .information {
+      padding: 50px 50px 0;
+      width: 65%;
+
+      p { margin-bottom: 20px; }
+
+      .button-group {
+        display: flex;
+        justify-content: center;
+
+        .action {
+          border: none;
+          border-radius: 0;
+          padding: 10px;
+          width: 120px;
+          background-color: $primaryColor;
+
+          a {
+            color: $white;
+            text-decoration: none;
+          }
+
+          &:hover {
+            background-color: $buttonHover;
+
+            a { color: $primaryColor; }
+          }
+
+          &:nth-child(2) { margin-left: 25px; }
+        }
+      }
+    }
+  }
+}
