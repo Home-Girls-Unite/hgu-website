@@ -23,7 +23,7 @@ const PageSections = ({sections, className}) => (
                       <Button className='action' key={button.id}>
                         {
                           button.link.startsWith('http') ?
-                          <a href={button.link} target='_blank'>{button.label}</a> :
+                          <a href={button.link} target='_blank' rel='noreferrer'>{button.label}</a> :
                           <Link to={button.link}>{button.label}</Link>
                         }
                       </Button>)
