@@ -17,7 +17,15 @@ const Mission = () => (
     </div>
     <div className='section'>
       <Slashes />
-      <Carousel className='answers' emulateTouch infiniteLoop showArrows={false} showStatus={false} showIndicators={false}>
+      <Carousel
+        autoPlay
+        className='answers'
+        emulateTouch
+        infiniteLoop
+        showArrows={false}
+        showStatus={false}
+        showIndicators={false}
+        showThumbs={false}>
         {
           ANSWERS.map(answer => (<p key={answer.id} className='answer'>{answer.value}</p>))
         }
