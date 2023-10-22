@@ -56,6 +56,8 @@ main {
     @include fontWeightScale(3);
   }
 
+	a, p, h1, h2, h3, h5, h5, div, section, li { color: $primaryColor; }
+
   .base-heading, .base-sub-heading {
     color: $primaryColor;
     text-align: center;
@@ -70,9 +72,31 @@ main {
 
 	.fade-in-group { animation: fadeIn 7s; }
 
+	.form {
+    margin-bottom: 20px;
+
+    input {
+      height: 30px;
+      width: 100%;
+      padding: 10px 0;
+      border: 0;
+      border-bottom: 1px solid $primaryColor;
+      outline-style: none;
+
+      &:focus {
+        border: 0.5px solid #e5e5e5;
+        border-bottom: 1px solid $primaryColor;
+      }
+
+      &::placeholder { color: $primaryColor; }
+    }
+  }
+
 	@media (min-width: $tabletSm) {
 
 		.showcases { padding: 0 80px; }
+
+		.form input { padding: 10px; }
 	}
 
 	@media (min-width: $desktopLg) {
