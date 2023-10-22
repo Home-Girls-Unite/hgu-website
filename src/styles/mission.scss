@@ -65,6 +65,7 @@
 
         .answer {
           @include fontScale(6);
+          text-transform: capitalize;
           text-align: left;
         }
       }
