@@ -1,0 +1,49 @@
+@import '../shared/settings.scss';
+
+.event {
+  padding: 0 80px 80px;
+
+  .event-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 70px;
+    width: 1464px;
+    margin-bottom: 40px;
+
+    img, .text { width: 697px; }
+
+    .text { align-self: center; }
+
+    .event-image { height: 528px; }
+  }
+
+  h2 {
+    @include fontScale(5);
+    @include fontWeightScale(3);
+  }
+
+  strong {
+    @include fontScale(3);
+    @include fontWeightScale(3);
+  }
+
+  p {
+    @include fontScale(2);
+    margin-bottom: 20px;
+  }
+
+  ul { list-style-type: disc; }
+
+  .sections {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    margin-left: 230px;
+    gap: 70px;
+    width: 1200px;
+
+    .section { width: 450px; }
+  }
+}
