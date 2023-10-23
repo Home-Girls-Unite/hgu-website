@@ -44,6 +44,25 @@ const TemplateWrapper = ({children, uri}) => {
           }
         }
       }
+      allSanityEvents {
+        nodes {
+          id
+          sections {
+            _rawDescription
+            id
+            title
+          }
+          eventDate
+          title
+          slug {
+            current
+          }
+          cover {
+            ...on SanityPhoto {...Photo}
+            ...on SanityShowcase {...Showcase}
+          }
+        }
+      }
     }
     fragment Photo on SanityPhoto {
       id
@@ -82,8 +101,11 @@ const TemplateWrapper = ({children, uri}) => {
           React.cloneElement(
             children,
             {
-              page: data.allSanityPage.nodes.find(node => node.slug.current === uri.replace('/', '')) || {}})
+              page: data.allSanityPage.nodes.find(node => node.slug.current === uri.replace('/', '')) || {},
+              events: data.allSanityEvents.nodes
             }
+          )
+        }
         <LetsTalk />
         <Footer />
       </main>
