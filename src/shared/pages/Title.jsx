@@ -9,8 +9,9 @@ const Title = ({uri}) => {
 
   useEffect(() => {
     const pathname = uri.replace(/\//, '').replace(/-/g, ' ')
+    const appName = ORGANIZATION_NAME.replace(/\s/g, '')
 
-    setTitle(pathname ? `${sentenceToUppercase(pathname)} | ${ORGANIZATION_NAME}`: ORGANIZATION_NAME)
+    setTitle(pathname ? `${sentenceToUppercase(pathname)} | ${appName}`: appName)
   }, [uri])
 
   return (

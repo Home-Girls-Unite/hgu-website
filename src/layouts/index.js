@@ -1,12 +1,12 @@
 import React from 'react'
-import {Helmet} from 'react-helmet'
 import {graphql, useStaticQuery} from 'gatsby'
 
 import Header from '../shared/Header'
 import Footer from '../shared/footer/Footer'
 import LetsTalk from '../shared/LetsTalk'
+import Title from '../shared/pages/Title'
 
-import {ORGANIZATION_NAME, QUICK_LINKS} from '../lib/constants'
+import {QUICK_LINKS} from '../lib/constants'
 
 import './layout.scss'
 
@@ -89,13 +89,7 @@ const TemplateWrapper = ({children, uri}) => {
   if (activeLinks.includes(uri)) {
     return (
       <main className="homepage">
-        <Helmet
-          title={ORGANIZATION_NAME}
-          meta={[
-            {name: 'description', content: `${ORGANIZATION_NAME} (HGU) is a  Community Interest Company (CIC) that provides a safe space for eldest daughters from immigrant homes.`},
-            {name: 'keywords', content: 'women, daughters, eldest, support'}
-          ]}
-        />
+        <Title uri={uri} />
         <Header />
         {
           React.cloneElement(
