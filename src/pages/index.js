@@ -7,12 +7,12 @@ import Trustees from "../shared/homepage/trustees/Trustees"
 
 import {ORGANIZATION_NAME} from '../lib/constants'
 
-const IndexPage = () => (
+const IndexPage = ({photos}) => (
   <React.Fragment>
     <h1 className="base-heading">{ORGANIZATION_NAME.replace(/\s/g, '')}</h1>
     <h4 className="base-sub-heading">Creating Safe Spaces For Eldest Daughters</h4>
     <Showcases />
-    <Information />
+    <Information photos={photos} />
     <Trustees />
     <Mission />
   </React.Fragment>
