@@ -1,0 +1,14 @@
+@import '../shared/settings.scss';
+
+.brand-group {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+  .brand {
+    border-radius: 15px;
+    width: 371.333px;
+  }
+}
