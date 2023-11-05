@@ -1,0 +1,13 @@
+@import '../shared/settings.scss';
+
+.brands-section {
+  padding: 0 80px;
+
+  .heading {
+    @include fontScale(6);
+    @include fontWeightScale(3);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px 0;
+  }
+}
