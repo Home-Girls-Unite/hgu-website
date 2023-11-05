@@ -104,7 +104,6 @@ const TemplateWrapper = ({children, uri}) => {
   )
 
   const page = findBySlug({list: data.allSanityPage.nodes, slug: uri.replace('/', '')})
-  console.log(data.allSanityPage.nodes)
 
   if (activeLinks.includes(uri)) {
     return (
