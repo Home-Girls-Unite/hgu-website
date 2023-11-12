@@ -9,7 +9,7 @@ const FORM_SLUG = 'prefer-we-call-you'
 
 const ContactUs = ({page}) => (
   <React.Fragment>
-    <section className='heading'>
+    <section className='contact-heading'>
       <h1 className='base-heading'>Want To Work Together?</h1>
       <p>Contact us, and let's discover how we can help your organization become even greater.</p>
     </section>
