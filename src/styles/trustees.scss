@@ -17,29 +17,91 @@
   }
 
   .image-container {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 80px;
 
-    .trustee-image {
-      min-height: 620px;
+    .trustee {
       width: 100%;
+      position: relative;
+
+      img {
+        transition: transform 1s;
+        transform: scale(1);
+      }
+
+      &:hover img {
+        transition: transform 1s;
+        transform: scale(1.2);
+      }
+
+      .trustee-image { height: 620px; }
+  
+      .name-plate {
+        align-items: center;
+        display: none;
+        background-color: $primaryColor;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        min-height: 620px;
+        width: 100%;
+        z-index: 2;
+
+        h2, p { color: $white; }
+
+        p { @include fontWeightScale(1); }
+
+        h2 {
+          @include fontWeightScale(3);
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin: 20px 0;
+        }
+  
+        &.display {
+          animation: fadeIn 2s;
+          display: flex;
+
+          h2, p { animation: expand 1.5s; }
+        }
+      }
     }
   }
 
   @media (min-width: $tabletSm) {
     padding: 0 80px;
 
-    .image-container .trustee-image { width: 50%; }
+    .image-container {
+
+      .trustee, .name-plate { width: 50%; }
+    }
   }
 
   @media (min-width: $tabletLg) {
 
-    .image-container .trustee-image { width: 25%; }
+    .image-container {
+
+      .trustee, .name-plate { width: 25%; }
+    }
   }
 
   @media (min-width: $desktopLg) { margin: 200px 0; }
 
   @media (min-width: $desktopXLg) {
 
-    .image-container .trustee-image { width: 470px; }
+    .image-container {
+
+      .trustee, .name-plate { width: 470px; }
+    }
+  }
+
+  @keyframes expand {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
   }
 }
