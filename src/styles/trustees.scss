@@ -30,10 +30,20 @@
         transform: scale(1);
       }
 
-      &:hover img {
+      &:hover {
+
+        .name-plate {
+          animation: fadeIn 2s;
+          display: flex;
+
+          h2, p { animation: expand 1.5s; }
+        }
+
+        img {
         transition: transform 1s;
         transform: scale(1.2);
       }
+    }
 
       .trustee-image { height: 620px; }
   
@@ -57,13 +67,6 @@
           text-transform: uppercase;
           letter-spacing: 2px;
           margin: 20px 0;
-        }
-  
-        &.display {
-          animation: fadeIn 2s;
-          display: flex;
-
-          h2, p { animation: expand 1.5s; }
         }
       }
     }
