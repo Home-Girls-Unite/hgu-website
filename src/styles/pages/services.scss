@@ -1,11 +1,10 @@
 @import '../shared/settings.scss';
 
 .cover {
-  margin: 0 80px;
+  margin: 0 20px;
 
   .heading {
     margin: 80px auto;
-    width: 450px;
 
     h5 {
       @include fontWeightScale(3);
@@ -16,8 +15,20 @@
     }
 
     .base-heading {
+      @include fontScale(7);
       margin-top: 15px;
       text-transform: capitalize;
+    }
+  }
+
+  @media (min-width: $tabletMd) {  margin: 0 80px; }
+
+  @media (min-width: $tabletLg) {
+
+    .heading {
+      width: 450px;
+
+      .base-heading {  @include fontScale(6); }
     }
   }
 }
@@ -25,11 +36,16 @@
 .contents {
   border-top: 2px solid $primaryColor;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 80px 80px;
+  margin: 0 20px 80px;
   padding-top: 100px;
 
-  .spotlight, .sections { width: 45%; }
+  .spotlight {
+    border-bottom: 2px solid $primaryColor;
+    margin-bottom: 80px;
+    padding-bottom: 40px;
+  }
 
   .base-heading {
     margin-top: 0;
@@ -49,13 +65,32 @@
     flex-wrap: wrap;
 
     .section {
-      width: 45%;
+      margin-bottom: 40px;
+
 
       p {
         @include fontScale(2);
 
         &:not(:last-of-type) { margin-bottom: 20px; }
       }
+    }
+  }
+
+  @media (min-width: $tabletMd) {
+    margin-left: 80px;
+    margin-right: 80px;
+
+    .sections .section { width: 45%; }
+  }
+
+  @media (min-width: $desktopMd) {
+
+    .spotlight, .sections { width: 45%; }
+
+    .spotlight {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
   }
 }
