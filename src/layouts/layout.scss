@@ -66,6 +66,8 @@ main {
     margin-bottom: 20px;
   }
 
+  .screen-reader-only { display: none; }
+
   .base-heading { margin-top: 50px; }
 
   .base-sub-heading { margin-bottom: 50px; }
@@ -77,12 +79,10 @@ main {
 	.form {
     margin-bottom: 20px;
 
-    input {
-      height: 30px;
-      width: 100%;
-      padding: 10px 0;
+    input, textarea {
       border: 0;
-      border-bottom: 1px solid $primaryColor;
+      border-bottom: 1.5px solid $primaryColor;
+      color: $primaryColor;
       outline-style: none;
 
       &:focus {
@@ -92,6 +92,14 @@ main {
 
       &::placeholder { color: $primaryColor; }
     }
+
+    input {
+      height: 30px;
+      padding: 10px 0;
+      width: 100%;
+    }
+
+    textarea { height: 100px; }
   }
 
 	@media (min-width: $tabletSm) {
