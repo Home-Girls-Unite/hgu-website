@@ -1,8 +1,7 @@
 @import '../shared/settings.scss';
 
 .page-sections {
-  margin: 0 auto 200px;
-  width: 70%;
+  margin: 0 20px 200px;
 
   h2 {
     @include fontScale(5);
@@ -10,18 +9,18 @@
     align-self: center;
     text-align: center;
     text-transform: uppercase;
-    width: 21%;
   }
 
   h2, p { color: $primaryColor; }
 
   .section {
-    display: flex;
-    justify-content: space-between;
+    
+    h2 {
+      text-align: center;
+      margin: 40px 0;
+    }
 
     .information {
-      padding: 50px 50px 0;
-      width: 65%;
 
       p { margin-bottom: 20px; }
 
@@ -58,6 +57,24 @@
         li {
           color: $primaryColor;
         }
+      }
+    }
+  }
+
+  @media (min-width: $tabletSm) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+
+    h2 { width: 21%; }
+
+    .section {
+      display: flex;
+      justify-content: space-between;
+
+      .information {
+        padding: 50px 50px 0;
+        width: 65%;
       }
     }
   }
