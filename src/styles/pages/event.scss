@@ -5,13 +5,11 @@
 
   .event-heading {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 auto;
-    gap: 70px;
-    width: 1464px;
     margin-bottom: 40px;
 
-    img, .text { width: 697px; }
+    .event-image, .text { margin-bottom: 40px; }
 
     .text { align-self: center; }
 
@@ -40,10 +38,30 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 40px;
-    margin-left: 230px;
-    gap: 70px;
-    width: 1200px;
+  }
 
-    .section { width: 450px; }
+  @media (min-width: $tabletLg) {
+
+    .sections .section { width: 45%; }
+
+    .event-heading .event-image, .text {
+      margin-bottom: 0;
+      width: 45%;
+    }
+  }
+
+  @media (min-width: $desktopMd) {
+
+    .event-heading {
+      margin: 0 auto 40px;
+      gap: 70px;
+      width: 76%;
+    }
+
+    .sections {
+      margin-left: 230px;
+      gap: 70px;
+      width: 70%;
+    }
   }
 }
