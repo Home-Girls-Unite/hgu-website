@@ -1,7 +1,7 @@
 import React from 'react'
 import {useStaticQuery, graphql} from 'gatsby'
 
-import {GatsbyImage} from 'gatsby-plugin-image'
+import Trustee from './Trustee'
 
 import '../../../styles/trustees.scss'
 
@@ -32,14 +32,7 @@ const Trustees = () => {
       <div className='image-container'>
         {
           data.allSanityTrustee.nodes.map(
-            trustee => (
-              <GatsbyImage
-                key={trustee.id}
-                className='trustee-image'
-                alt={trustee.name}
-                image={trustee.image.asset.gatsbyImageData} 
-              />
-            )
+            trustee => (<Trustee key={trustee.id} trustee={trustee} />)
           )
         }
       </div>
