@@ -22,7 +22,8 @@ const Newsletter = () => {
       <h1 className='heading'>Join Our Newsletter</h1>
       <div className='description'>Sign up for our newsletter to enjoy free tips and tricks!</div>
       <form className='form' onSubmit={handleSubmit(onSubmit)}>
-        <input placeholder='Email Address' type='email' required defaultValue='' {...register('emailRequired', {required: true})} />
+        <label className='screen-reader-only' htmlFor='email'>Email Address</label>
+        <input placeholder='Email Address' name='email' type='email' required defaultValue='' {...register('emailRequired', {required: true})} />
       </form>
       <Button disabled={!!errors.emailRequired} onClick={onClickButton} label='Sign Me Up' />
     </section>
