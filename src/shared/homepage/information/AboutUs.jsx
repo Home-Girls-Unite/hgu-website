@@ -24,7 +24,7 @@ const AboutUs = ({images, imageName = ''}) => {
             This is a key strength of our organisation and one we are reminded of when we receive feedback such as 'I wish I came across HGU sooner'.
             Such feedback reinforces that we are improving the lives of eldest daughters and making the right impact.
           </p>
-          <div className='button-group'>
+          <div className='button-group fade-in-group'>
             <LinkButton className='contact-button' path='contact' label='Learn More' />
           </div>
         </div>

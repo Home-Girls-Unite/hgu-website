@@ -108,9 +108,11 @@ main {
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
+  0% {
+    margin-top: 0;
+    opacity: 0;
+  }
   100% {
-		margin-top: 40px;
 		opacity: 1;
 	}
 }
