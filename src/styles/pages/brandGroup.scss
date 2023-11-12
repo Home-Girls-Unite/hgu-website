@@ -3,12 +3,27 @@
 .brand-group {
   box-sizing: border-box;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   width: 100%;
 
   .brand {
     border-radius: 15px;
-    width: 371.333px;
+    margin-bottom: 20px;
+    width: 70%;
+  }
+
+  @media (min-width: $tabletSm) {
+
+    .brand { width: 40%; }
+  }
+
+  @media (min-width: $desktopSm) {
+
+    .brand {
+      width: 27%;
+      margin-bottom: 0;
+    }
   }
 }

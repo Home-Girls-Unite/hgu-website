@@ -1,7 +1,7 @@
 @import '../shared/settings.scss';
 
 .brands-section {
-  padding: 0 80px;
+  padding: 0 20px 80px;
 
   .heading {
     @include fontScale(6);
@@ -10,4 +10,6 @@
     text-transform: uppercase;
     margin: 40px 0;
   }
+  
+  @media (min-width: $tabletSm) { padding: 0 80px 80px; }
 }
