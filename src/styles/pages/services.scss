@@ -25,11 +25,7 @@
 
   @media (min-width: $tabletLg) {
 
-    .heading {
-      width: 450px;
-
-      .base-heading {  @include fontScale(6); }
-    }
+    .heading { width: 450px; }
   }
 }
 
