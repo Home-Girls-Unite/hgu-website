@@ -1,0 +1,47 @@
+@import '../shared/settings.scss';
+
+.heading {
+  margin-bottom: 150px;
+  text-align: center;
+  padding: 0 20px;
+
+  p { @include fontScale(2); }
+
+  h1 { @include fontScale(8); }
+}
+
+.contact-us {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 80px;
+  padding: 0 20px;
+
+  .contact-section {
+    width: 100%;
+
+    &:first-of-type { margin-bottom: 20px; }
+
+    h2 {
+      @include fontWeightScale(3);
+      @include fontScale(5);
+      margin-bottom: 40px;
+    }
+
+    p {
+
+      &:not(:last-of-type) { margin-bottom: 10px; }
+    }
+  }
+
+  @media (min-width: $tabletSm) {
+
+    .contact-section {
+      width: 45%;
+
+      &:first-of-type { margin-bottom: 0; }
+    }
+  }
+
+  @media (min-width: $desktopMd) { padding: 0 80px; }
+}

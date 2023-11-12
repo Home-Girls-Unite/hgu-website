@@ -1,0 +1,41 @@
+@import '../shared/settings.scss';
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  input.field { width: 100%; }
+
+  input, textarea { margin-top: 20px; }
+
+  textarea { width: 100%; }
+
+  @media (min-width: $tabletMd) {
+
+    input.field.field-50 { width: 42%; }
+  }
+
+  @media (min-width: $desktopSm) {
+
+    input.field, input.field.field-50 { width: 45%; }
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+
+  .basic-button.submit {
+    color: $primaryColor;
+    background-color: $buttonHover;
+    width: 150px;
+
+    &:hover {
+      background-color: $primaryColor;
+      color: $white;
+    }
+  }
+
+  @media (min-width: $tabletSm) { justify-content: end; }
+}
