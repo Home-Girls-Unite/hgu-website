@@ -1,0 +1,58 @@
+@import '../shared/settings.scss';
+
+.listen {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+
+  .base-heading {
+    text-transform: uppercase;
+    margin-bottom: 80px;
+  }
+
+  .podcasts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    .podcast-host {
+
+      img, svg {
+        height: 75px;
+        max-width: 270px;
+      }
+
+      .spotify-link { color: $spotifyGreen; }
+
+      .apple-link svg {
+        fill: $black;
+        width: 270px;
+      }
+    }
+  }
+
+  .spotify {
+    background-color: $buttonHover;
+    border-radius: 20px;
+    padding: 40px;
+  }
+
+  @media (min-width: $tabletMd) {
+
+    .spotify { padding: 80px; }
+  }
+
+  @media (min-width: $tabletLg) {
+
+    .podcasts { flex-direction: row; }
+
+    .spotify { width: 50%; }
+  }
+
+  @media (min-width: $desktopLg) {
+
+    .podcasts { width: 50%; }
+  }
+}
