@@ -1,0 +1,65 @@
+@import '../shared/settings.scss';
+
+.book-session {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 6;
+
+  .base-heading { text-transform: capitalize; }
+
+  .overlay {
+    position: fixed;
+    background-color: rgba(255, 120, 120, 0.6);
+    height: 100%;
+    width: 100%;
+  }
+
+  .description {
+    animation: slide 2s forwards;
+    box-sizing: border-box;
+    background-color: $buttonHover;
+    bottom: 20px;
+    border-radius: 15px;
+    margin: 0 20px 0 0;
+    height: 600px;
+    width: 32%;
+    padding: 40px;
+    position: fixed;
+
+    .closer {
+      cursor: pointer;
+      position: absolute;
+      right: 30px;
+      height: 30px;
+      width: 30px;
+    }
+
+    p { margin-bottom: 20px; }
+
+    .booking {
+      border: none;
+      border-radius: 0;
+      padding: 10px;
+      width: 130px;
+      background-color: $primaryColor;
+
+      a {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
