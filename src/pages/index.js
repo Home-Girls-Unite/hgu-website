@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useCallback} from "react"
 
 import BookSession from "../shared/pages/BookSession"
 import Information from "../shared/homepage/Information"
@@ -13,12 +13,12 @@ const IndexPage = ({photos}) => {
   const [seenDialog, setSeenDialog] = useState(false)
   const [showDialog, setShowDialog] = useState(false)
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const bottom = Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight
 
     if (bottom && !seenDialog)
       setShowDialog(true)
-  }
+  }, [seenDialog])
 
   React.useEffect(() => {
     window.addEventListener('scroll', handleScroll)
@@ -26,7 +26,7 @@ const IndexPage = ({photos}) => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [handleScroll])
 
   const dismissDialog = event => {
     if (event)

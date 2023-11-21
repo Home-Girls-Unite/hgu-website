@@ -41,6 +41,7 @@ const Listen = () => (
     </div>
     <div className='spotify'>
       <iframe
+        title='Listen to latest HomeGirlsUnite podcase episode'
         style={{borderRadius: '12px'}}
         src='https://open.spotify.com/embed/episode/6WLqYScAE2j6xKvrWFSXHh?utm_source=generator'
         width='100%'
