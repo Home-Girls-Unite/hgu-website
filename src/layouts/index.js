@@ -30,6 +30,11 @@ const TemplateWrapper = ({children, uri}) => {
             slug {
               current
             }
+            description {
+              children {
+                text
+              }
+            }
             _rawDescription
             buttons {
               id
