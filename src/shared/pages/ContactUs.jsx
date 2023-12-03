@@ -2,10 +2,12 @@ import React from 'react'
 import {PortableText} from '@portabletext/react'
 
 import ContactForm from './ContactForm'
+import Location from './Location'
 
 import '../../styles/pages/contactUs.scss'
 
 const FORM_SLUG = 'prefer-we-call-you'
+const ADDRESS_SLUG = 'company-address-number'
 
 const ContactUs = ({page}) => (
   <React.Fragment>
@@ -20,6 +22,7 @@ const ContactUs = ({page}) => (
             <h2>{section.title}</h2>
             <PortableText value={section._rawDescription} />
             {section.slug.current === FORM_SLUG && <ContactForm />}
+            {section.slug.current === ADDRESS_SLUG && <Location address={section.description[0].children[0].text} />}
           </div>
         ))
       }
