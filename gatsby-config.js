@@ -1,6 +1,8 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+require('dotenv').config({path: `.env.${process.env.NODE_ENV}`})
+
 module.exports = {
   siteMetadata: {
     title: 'HomeGirlsUnite',
@@ -17,8 +19,8 @@ module.exports = {
     {
     resolve: 'gatsby-source-sanity',
     options: {
-      "projectId": "efn30l8o",
-      "dataset": ""
+      "projectId": process.env.SANITY_PROJECT_ID,
+      "dataset": process.env.SANITY_DATASET
     }
   }, {
     resolve: 'gatsby-plugin-google-gtag',
