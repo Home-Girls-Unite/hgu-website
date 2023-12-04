@@ -3,7 +3,7 @@ import React from 'react'
 const Location = ({address = 'Space Needle, Seattle, WA'}) => (
   <div className='location'>
     <iframe
-      width="600"
+      width="100%"
       height="450"
       style={{border: 0}}
       loading="lazy"
