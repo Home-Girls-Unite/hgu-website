@@ -22,3 +22,5 @@ export const groupElements = ({elements = [], size = 3}) => elements.reduce((acc
 }, [])
 
 export const randomize = (limit = 10) => (Math.random() * limit)
+
+export const featuredPodcast = (podcasts = []) => podcasts.find(podcast => podcast.status.includes('featured')) || {}
