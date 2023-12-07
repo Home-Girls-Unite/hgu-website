@@ -25,19 +25,21 @@ const Trustees = () => {
     }
   `)
 
-  return (
-    <section className='trustees'>
-      <p className='text'>Get Inspired</p>
-      <h1 className='heading'>Team + Trustees</h1>
-      <div className='image-container'>
-        {
-          data.allSanityTrustee.nodes.map(
-            trustee => (<Trustee key={trustee.id} trustee={trustee} />)
-          )
-        }
-      </div>
-    </section>
-  )
+  if (data.allSanityTrustee.nodes.length) {
+    return (
+      <section className='trustees'>
+        <p className='text'>Get Inspired</p>
+        <h1 className='heading'>Team + Trustees</h1>
+        <div className='image-container'>
+          {
+            data.allSanityTrustee.nodes.map(
+              trustee => (<Trustee key={trustee.id} trustee={trustee} />)
+            )
+          }
+        </div>
+      </section>
+    )
+  } else { return null }
 }
 
 export default Trustees

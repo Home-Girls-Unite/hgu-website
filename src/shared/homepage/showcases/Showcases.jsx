@@ -28,24 +28,26 @@ const Showcases = () => {
     }
   `)
 
-  return (
-    <Carousel
-      showStatus={false}
-      showArrows={false}
-      showThumbs={false}
-      showIndicators={false}
-      className='showcases'
-      autoPlay
-      animationHandler='fade'
-      dynamicHeight
-      emulateTouch
-      infiniteLoop 
-      swipeable={false}>
-      {
-        data.allSanityShowcase.nodes.map(showcase => (<Showcase key={showcase.id} showcase={showcase} />))
-      }
-    </Carousel>
-  )
+  if (data.allSanityShowcase?.nodes?.length) {
+    return (
+      <Carousel
+        showStatus={false}
+        showArrows={false}
+        showThumbs={false}
+        showIndicators={false}
+        className='showcases'
+        autoPlay
+        animationHandler='fade'
+        dynamicHeight
+        emulateTouch
+        infiniteLoop
+        swipeable={false}>
+        {
+          data.allSanityShowcase.nodes.map(showcase => (<Showcase key={showcase.id} showcase={showcase} />))
+        }
+      </Carousel>
+    )
+  } else { return null }
 }
 
 export default Showcases
