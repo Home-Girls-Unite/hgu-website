@@ -6,7 +6,7 @@ require('dotenv').config({path: `.env.${process.env.NODE_ENV}`})
 module.exports = {
   siteMetadata: {
     title: 'HomeGirlsUnite',
-    siteUrl: 'https://www.yourdomain.tld'
+    siteUrl: process.env.SITE_URL
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -20,7 +20,8 @@ module.exports = {
     resolve: 'gatsby-source-sanity',
     options: {
       "projectId": process.env.SANITY_PROJECT_ID,
-      "dataset": process.env.SANITY_DATASET
+      "dataset": process.env.SANITY_DATASET,
+      "token": process.env.SANITY_TOKEN || ''
     }
   }, {
     resolve: 'gatsby-plugin-google-gtag',
