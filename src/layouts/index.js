@@ -75,6 +75,15 @@ const TemplateWrapper = ({children, uri}) => {
       allSanityPhoto {
         nodes {...Photo}
       }
+      allSanityPodcasts {
+        nodes {
+          id
+          name
+          releaseDate
+          status
+          link
+        }
+      }
     }
     fragment Photo on SanityPhoto {
       id
@@ -122,7 +131,8 @@ const TemplateWrapper = ({children, uri}) => {
             {
               page,
               events: data.allSanityEvents.nodes,
-              photos: data.allSanityPhoto.nodes
+              photos: data.allSanityPhoto.nodes,
+              podcasts: data.allSanityPodcasts.nodes
             }
           ) :
           (

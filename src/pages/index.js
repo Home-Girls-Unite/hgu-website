@@ -9,7 +9,7 @@ import Trustees from "../shared/homepage/trustees/Trustees"
 
 import {ORGANIZATION_NAME} from '../lib/constants'
 
-const IndexPage = ({photos}) => {
+const IndexPage = ({photos, podcasts}) => {
   const [seenDialog, setSeenDialog] = useState(false)
   const [showDialog, setShowDialog] = useState(false)
 
@@ -42,7 +42,7 @@ const IndexPage = ({photos}) => {
       <h4 className="base-sub-heading">Creating Safe Spaces For Eldest Daughters</h4>
       <Showcases />
       <Information photos={photos} />
-      <Listen />
+      <Listen podcasts={podcasts} />
       <Trustees />
       <Mission />
       {
