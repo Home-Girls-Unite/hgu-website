@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faClose} from '@fortawesome/free-solid-svg-icons'
 
@@ -8,10 +8,22 @@ import '../../styles/pages/bookSession.scss'
 
 const BookSession = ({dismissDialog}) => {
   const date = new Date(Date.now())
+  const overlayRef = useRef()
+
+  useEffect(() => {
+    const overlay = overlayRef.current
+
+    if (overlay)
+      overlay.addEventListener('click', dismissDialog)
+
+    return () => {
+      overlay.removeEventListener('click', dismissDialog)
+    }
+  }, [dismissDialog])
 
   return (
     <div className='book-session'>
-      <div onClick={dismissDialog} className='overlay' />
+      <div ref={overlayRef} className='overlay' />
       <div className='description'>
         <FontAwesomeIcon onClick={dismissDialog} className='closer' icon={faClose} />
         <h1 className='base-heading'>Book a rant session here</h1>
