@@ -24,6 +24,12 @@ module.exports = {
       "token": process.env.SANITY_TOKEN || ''
     }
   }, {
+    resolve: 'gatsby-plugin-mailchimp',
+    options: {
+        endpoint: process.env.MAILCHIMP_NEWSLETTER_LIST || '',
+        timeout: 3500
+    },
+  }, {
     resolve: 'gatsby-plugin-google-gtag',
     options: {
       trackingIds: ['GA-TRACKING_ID']
