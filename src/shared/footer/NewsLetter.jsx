@@ -1,20 +1,34 @@
-import * as React from 'react'
+import React, {useState} from 'react'
 import {useForm} from 'react-hook-form'
+import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 import {Button} from '../Buttons'
 
 import '../../styles/footer/newsletter.scss'
 
-const Newsletter = () => {
-  const {register, handleSubmit, formState: {errors}, watch} = useForm()
-  const email = watch('emailRequired')
+const EMAIL_REGEX = /^\S+@\S+\.\S+$/g
 
-  const onSubmit = data => console.log(data)
+const Newsletter = () => {
+  const {register, handleSubmit, formState: {errors}, watch, setValue} = useForm()
+  const [subscribing, setSubscribing] = useState(false)
+  const email = watch('email')
+
+  const sentToMailchimp = email => {
+    setSubscribing(true)
+
+    addToMailchimp(email).then(() => {
+      setValue('email', '')
+      setSubscribing(false)
+    })
+  }
+
+  const onSubmit = data => sentToMailchimp(data.email)
 
   const onClickButton = React.useCallback(event => {
     event.preventDefault()
 
-    console.log({email})
+    if (EMAIL_REGEX.test(email))
+      sentToMailchimp(email)
   }, [email])
 
   return (
@@ -23,9 +37,16 @@ const Newsletter = () => {
       <div className='description'>Sign up for our newsletter to enjoy free tips and tricks!</div>
       <form className='form' onSubmit={handleSubmit(onSubmit)}>
         <label className='screen-reader-only' htmlFor='email'>Email Address</label>
-        <input placeholder='Email Address' name='email' type='email' required defaultValue='' {...register('emailRequired', {required: true})} />
+        <input
+          placeholder='Email Address'
+          name='email'
+          type='email'
+          required
+          defaultValue=''
+          {...register('email', {required: true, pattern: EMAIL_REGEX})}
+        />
       </form>
-      <Button disabled={!!errors.emailRequired} onClick={onClickButton} label='Sign Me Up' />
+      <Button disabled={!!errors.email || subscribing} onClick={onClickButton} label='Sign Me Up' />
     </section>
   )
 }
