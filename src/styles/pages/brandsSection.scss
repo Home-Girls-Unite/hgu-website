@@ -10,6 +10,8 @@
     text-transform: uppercase;
     margin: 40px 0;
   }
+
+  .brands .dot.selected { background: $black; }
   
   @media (min-width: $tabletSm) { padding: 0 80px 80px; }
 }
