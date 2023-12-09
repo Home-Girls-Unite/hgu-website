@@ -117,7 +117,7 @@ const TemplateWrapper = ({children, uri}) => {
     [data.allSanityPhoto.nodes]
   )
 
-  const page = findBySlug({list: data.allSanityPage.nodes, slug: uri.replace('/', '')})
+  const page = findBySlug({list: data.allSanityPage.nodes, slug: uri?.replace('/', '')})
 
   if (activeLinks.includes(uri)) {
     return (
