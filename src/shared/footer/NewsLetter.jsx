@@ -13,14 +13,14 @@ const Newsletter = () => {
   const [subscribing, setSubscribing] = useState(false)
   const email = watch('email')
 
-  const sentToMailchimp = email => {
+  const sentToMailchimp = React.useCallback(email => {
     setSubscribing(true)
 
     addToMailchimp(email).then(() => {
       setValue('email', '')
       setSubscribing(false)
     })
-  }
+  }, [setValue])
 
   const onSubmit = data => sentToMailchimp(data.email)
 
@@ -29,7 +29,7 @@ const Newsletter = () => {
 
     if (EMAIL_REGEX.test(email))
       sentToMailchimp(email)
-  }, [email])
+  }, [email, sentToMailchimp])
 
   return (
     <section className='newsletter'>

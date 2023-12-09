@@ -1,17 +1,41 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useState} from 'react'
 import {useForm} from 'react-hook-form'
+import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 import {Button} from '../Buttons'
 
 import '../../styles/pages/contactForm.scss'
 
 const ContactForm = () => {
-  const {register, handleSubmit, formState: {errors}, watch} = useForm()
+  const [subscribing, setSubscribing] = useState(false)
+  const {register, handleSubmit, formState: {errors}, watch, reset} = useForm()
+  const formData = watch(['email', 'firstName', 'lastName', 'phone', 'company', 'website', 'description'])
 
-  const onSubmit = data => console.log(data)
+  const sentToMailchimp = ({email, firstName, lastName, phone, company, website, description}) => {
+    const mailchimpFields = {
+      FNAME: firstName,
+      LNAME: lastName,
+      PHONE: phone,
+      ORG: company,
+      WEBSITE: website,
+      INFO: description
+    }
+    setSubscribing(true)
+
+    addToMailchimp(email, mailchimpFields).then(() => {
+      reset()
+      setSubscribing(false)
+    })
+  }
+
+  const onSubmit = data => sentToMailchimp(data)
 
   const onClickButton = event => {
+    const [email, firstName, lastName, phone, company, website, description] = formData
     event.preventDefault()
+
+    if (Object.keys(errors).length === 0)
+      sentToMailchimp({email, firstName, lastName, phone, company, website, description})
   }
 
   return (
@@ -24,7 +48,7 @@ const ContactForm = () => {
         <label htmlFor='phone' className='screen-reader-only'>Phone Number</label>
         <input name='phone' className='field' placeholder='Phone Number' type='number' defaultValue='' {...register('phone')} />
         <label htmlFor='email' className='screen-reader-only'>Email Address*</label>
-        <input name='email' className='field' placeholder='Email Address*' type='email' defaultValue='' required {...register('emailRequired', {required: true})} />
+        <input name='email' className='field' placeholder='Email Address*' type='email' defaultValue='' required {...register('email', {required: true})} />
         <label htmlFor='company' className='screen-reader-only'>Business/Organization name</label>
         <input name='company' className='field field-50' placeholder='Business/Organization name' type='text' defaultValue='' {...register('company')} />
         <label htmlFor='Website' className='screen-reader-only'>Website URL</label>
@@ -33,7 +57,7 @@ const ContactForm = () => {
         <textarea name='description' placeholder='Tell us how we can help*' required {...register('description', {required: true})} />
       </form>
       <div className='button-group'>
-        <Button className='submit' label='Submit' onClick={onClickButton} />
+        <Button disabled={subscribing} className='submit' label='Submit' onClick={onClickButton} />
       </div>
     </Fragment>
   )
