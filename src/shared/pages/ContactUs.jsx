@@ -17,7 +17,7 @@ const ContactUs = ({page}) => (
     </section>
     <section className='contact-us'>
       {
-        page.sections.map(section => (
+        page.sections?.map(section => (
           <div key={section.id} className='contact-section'>
             <h2>{section.title}</h2>
             <PortableText value={section._rawDescription} />

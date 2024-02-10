@@ -10,7 +10,7 @@ import '../../styles/pages/pageSections.scss'
 const PageSections = ({sections, className}) => (
   <section className={classnames('page-sections', className)}>
     {
-      sections.map(section => (
+      sections?.map(section => (
         <div className='section' key={section.id}>
           <h2>{section.title}</h2>
           <div className='information'>
