@@ -32,7 +32,18 @@ module.exports = {
   }, {
     resolve: 'gatsby-plugin-google-gtag',
     options: {
-      trackingIds: ['GA-TRACKING_ID']
+      trackingIds: [
+        process.env.GA_ID || 'GA-TRACKINGID',
+        process.env.GTM_ID || 'GTM-GTAGID'
+      ],
+      pluginConfig: {
+        // Puts tracking script in the head instead of the body
+        head: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Delays processing pageview events on route update (in milliseconds)
+        delayOnRouteUpdate: 0,
+      }
     }
   }, {
     resolve: 'gatsby-omni-font-loader',
