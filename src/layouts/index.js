@@ -8,13 +8,13 @@ import Title from '../shared/pages/Title'
 import PageUnavailable from '../shared/pages/PageUnavailable'
 
 import {QUICK_LINKS} from '../lib/constants'
-import {findBySlug, pageHasData} from '../lib/tools'
+import {findBySlug, pageHasData, renameSlug} from '../lib/tools'
 
 import './layout.scss'
 
 const TemplateWrapper = ({children, uri}) => {
   const [photo, setPhoto] = useState({})
-  const activeLinks = QUICK_LINKS.map(link => link.path)
+  const activeLinks = [...QUICK_LINKS.map(link => link.path), '/contact-us']
   const data = useStaticQuery(graphql`
     query {
       allSanityPage {
@@ -117,7 +117,7 @@ const TemplateWrapper = ({children, uri}) => {
     [data.allSanityPhoto.nodes]
   )
 
-  const page = findBySlug({list: data.allSanityPage.nodes, slug: uri?.replace('/', '')})
+  const page = findBySlug({list: data.allSanityPage.nodes, slug: renameSlug(uri?.replace('/', ''))})
 
   if (activeLinks.includes(uri)) {
     return (
