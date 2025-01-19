@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {graphql, useStaticQuery} from 'gatsby'
+import {graphql, useStaticQuery, Script} from 'gatsby'
 
 import Header from '../shared/Header'
 import Footer from '../shared/footer/Footer'
@@ -145,6 +145,7 @@ const TemplateWrapper = ({children, uri}) => {
         }
         <LetsTalk />
         <Footer />
+        <Script src='https://cdn.cookie-script.com/s/72e988b2e76a0d89e37688cfbb051378.js' />
       </main>
     )
   } else {
