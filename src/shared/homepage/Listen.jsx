@@ -4,7 +4,6 @@ import {featuredPodcast} from '../../lib/tools'
 
 import ApplePodcastsIcon from '../../images/ApplePodcastsIcon'
 import spotify from '../../images/spotify.png'
-import google from '../../images/google.png'
 
 import '../../styles/pages/listen.scss'
 
@@ -32,15 +31,6 @@ const Listen = ({podcasts}) => {
               target='_blank'
               rel='noreferrer'>
               <ApplePodcastsIcon />
-            </a>
-          </div>
-          <div className='podcast-host'>
-            <a
-              className='google-link'
-              href='https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8xMjQ4ZGQyYy9wb2RjYXN0L3Jzcw?ep=14'
-              target='_blank'
-              rel='noreferrer'>
-              <img alt='spotify' src={google} />
             </a>
           </div>
         </div>
